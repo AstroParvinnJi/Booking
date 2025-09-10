@@ -1,0 +1,683 @@
+/* Basic Reset */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+    font-family:sans-serif; color:#333; scroll-behavior:smooth;
+    }
+  
+  img {
+  max-width: 100%;
+  height: 320px;
+  display: block;
+}
+
+/* Banner */
+.banner {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+    
+    /* Header */
+    header {
+  width: 100%;
+  min-height: 450px;
+  padding: 3rem 1rem;
+  text-align: center;
+  background-color: #fff; /* Optional: Add background */
+}
+
+    .heading{
+      font-size:40px;
+      margin-top: 10px;
+      color:black;
+    }
+    hr{
+      width: 70%;
+      margin: 0 auto;
+      border: 3px solid red;
+    }
+    header h1 {
+      font-size:2.5rem;
+      margin-bottom:1.8rem;
+      color:black;
+    }
+
+.form-box {
+  max-width: 600px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+h2 {
+  text-align: center;
+  color: #800000;
+  margin-bottom: 20px;
+}
+    
+label {
+  display: block;
+  margin-top: 12px;
+  text-align: left;
+  font-weight: bold;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+    }
+    .slots {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    .slot {
+      border: 1px solid #800000;
+      border-radius: 6px;
+      padding: 8px 15px;
+      cursor: pointer;
+    }
+    .slot.active {
+      background: #800000;
+      color: #fff;
+    }
+    .qr {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .qr img {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin: 0 auto;
+      width: 400px;
+      border: 2px solid #800000;
+      border-radius: 8px;
+    }
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      background: #800000;
+      color: #fff;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #600000;
+    }
+
+.container h1 { 
+  font-size:2.5rem;
+  margin-bottom:0.5rem;
+  text-align: center;
+  color:black; }
+
+.cta-banner {
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 150px;
+  border-radius: 10px;
+  margin: 30px auto;
+  margin-top: 40px;
+  padding-top: 70px;
+  width: 45%;
+  height: auto;
+}
+.cta-text {
+  font-size: 29px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.cta-btn {
+  background-color: #ffca28;
+  color: black;
+  padding: 12px 24px;
+  font-size: 23px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+.cta-btn:hover {
+  opacity: 0.9;
+}
+.h1-best{
+  font-size:2.5rem;
+  margin-bottom:0.5rem;
+  color:black;
+}
+    
+    /* Hero/footer container */
+    .container {
+      max-width:900px;
+      margin:auto;
+}
+    .about-box{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      width: 100%;
+      height: auto;
+    }
+    
+    /* Features Cards */
+    .features {
+      display:flex;
+      flex-wrap:wrap;
+      gap:1rem;
+      margin-top:2rem;
+  }
+    .feature {
+      flex:1;
+      min-width:220px;
+      background:white;
+      padding:1rem;
+      border-radius:8px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.1);
+      text-align:center;
+    }
+    
+    /* Trainer */
+    .trainer {
+      display:flex;
+      gap:1rem;
+      margin:2rem 0;
+}
+    .trainer img {
+      width:320px;
+      height:280px;
+      object-fit:cover;
+      border-radius: none;
+      border:4px solid #ffca28;
+    }
+    .book-text{
+      width: 100%;
+      height: auto;
+      margin-bottom: 30px;
+    }
+
+  .book-box {
+  background: #fffaf3;
+  width: 48%;
+  height: 320px; 
+  padding-top: 7px;
+  margin: 0 auto;
+}
+
+.book-box h1{
+  font-size:2.5rem;
+  text-align: center;
+  color:black;
+}
+
+.text-box{
+  width: 90%;
+  height: 180px;
+  margin: 0 auto;
+  margin-top: 40px;
+  }
+.about-section {
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+  background: #fffaf3;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+.about-container {
+  margin-top: -36px;
+  max-width: 900px;
+  color: #333;
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+}
+.about-container h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  color: #0d47a1;
+}
+    
+    /* FAQ */
+    .container-faq{
+      padding-top: 60px;
+      width:45%;
+      height: auto;
+      margin: 0 auto;
+    }
+    .container-faq details { margin-bottom:1rem; }
+    .container-faq summary {
+      cursor:pointer;
+      font-weight:bold;
+    }
+
+
+    /* Responsive */
+    @media (max-width:600px) {
+      .features, .trainer {
+        flex-direction:column;
+        align-items:center; }
+    }
+/* Responsive */
+@media (max-width: 1200px) {
+    .cta-banner {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 80%;
+    }
+
+    hr{
+      width: 100%;
+    }
+
+    .features {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .about-container p{
+      font-size: 20px;
+    }
+
+    .about-section{
+      height: 320px;
+      margin-top: -10px;
+    }
+
+    .about-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .book-text{
+      margin-bottom: -50px;
+    }
+
+    .book-box {
+        width: 75%;
+    }
+
+    .container-faq {
+        width: 75%;
+    }
+    .cta-banner{
+      gap: 100px;
+      display: flex;
+      flex-direction: row;
+      padding-left: 40px;
+    }
+      .webinar-container {
+    gap: 20px;
+    padding: 30px 15px;
+  }
+  form {
+    max-width: 400px;
+  }
+   .footer-container {
+    padding: 0 20px;
+   }
+}
+
+@media (max-width: 720px) {
+    header {
+        padding: 2rem 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .btn-primary {
+        font-size: 18px;
+    }
+
+    .time-box {
+        width: 60px;
+        height: 60px;
+    }
+
+    .time-box .num {
+        font-size: 20px;
+    }
+
+    .time-box .label {
+        font-size: 12px;
+    }
+
+    .cta-banner {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 90%;
+    }
+
+    .about-container p{
+      font-size: 19px;
+    }
+
+    .features {
+        flex-direction: row;
+    }
+
+    .about-box {
+        flex-direction: column;
+    }
+
+    .book-box {
+        width: 100%;
+    }
+    .book-box h1{
+        font-size: 35px;
+    }
+
+    .container-faq {
+        width: 90%;
+    }
+    .cta-banner{
+      padding-top: 20px;
+      gap: 40px;
+      margin: 0 auto;
+    }
+      .webinar-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .timer-section {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  form {
+    width: 100%;
+  }
+  .footer-container {
+      flex-direction: column;
+      text-align: center;
+    }
+    .footer-box iframe {
+      height: 200px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .heading {
+        font-size: 27px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    hr{
+      width: 100%;
+    }
+
+    header{
+      margin-bottom: -40px;
+    }
+
+    .container h1{
+      font-size: 1.9rem;
+    }
+    .about-container p{
+      font-size: 15px;
+    }
+    .book-box h1{
+      font-size: 1.9rem;
+    }
+    .book-box{
+      height: 330px;
+    }
+    .text-box p{
+      font-size: 16px;
+      }
+    .book-text{
+      margin-bottom: -20px;
+    }
+    .btn-primary {
+        font-size: 16px;
+        padding: 0.5rem 1rem;
+    }
+    .about-section{
+      margin-top: -10px;
+    }
+    .cta-text {
+        font-size: 24px;
+    }
+
+    .blinking-text {
+        font-size: 20px;
+    }
+
+    .time-box {
+        width: 50px;
+        height: 50px;
+    }
+
+    .time-box .num {
+        font-size: 18px;
+    }
+
+    .time-box .label {
+        font-size: 10px;
+    }
+
+    .features {
+        flex-direction: row;
+        flex: 1 1 100%; /* 1 per row */
+        max-width: 100%;
+    }
+
+    .about-box {
+        flex-direction: column;
+    }
+
+    .book-box {
+        width: 100%;
+    }
+
+    .container-faq {
+        width: 100%;
+        padding-left: 10px;
+    }
+    .cta-banner{
+      height: auto;
+      width: 100%;
+    }
+  .countdown-box {
+    gap: 10px;
+    padding: 15px;
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+  .time-box {
+    width: 65px;
+    height: 65px;
+  }
+  .time-box .num {
+    font-size: 20px;
+  }
+  .time-box .label {
+    font-size: 11px;
+  }
+  .webinar-container{
+    flex-direction: column;
+    width: 100%;
+  }
+  form {
+    padding: 20px;
+    width: 100%;
+  }
+  form label {
+    font-size: 14px;
+  }
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .footer-box { margin: 10px auto; }
+    .footer-box iframe { height: 180px; }
+}
+
+@media (max-width: 360px) {
+  .heading {
+    font-size: 27px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+
+  hr {
+    width: 100%;
+  }
+
+  header {
+    margin-bottom: -40px;
+  }
+
+  .container h1 {
+    font-size: 1.9rem;
+  }
+
+  .about-container p {
+    font-size: 13px;
+  }
+
+  .book-box h1 {
+    font-size: 1.9rem;
+  }
+
+  .book-box {
+    height: 330px;
+    width: 100%;
+  }
+
+  .text-box p {
+    font-size: 16px;
+  }
+
+  .book-text {
+    margin-bottom: -20px;
+  }
+
+  .btn-primary {
+    font-size: 16px;
+    padding: 0.5rem 1rem;
+  }
+
+  .about-section {
+    margin-top: -10px;
+  }
+
+  .cta-text {
+    font-size: 24px;
+  }
+
+  .blinking-text {
+    font-size: 20px;
+  }
+
+  .time-box {
+    width: 50px;
+    height: 50px;
+  }
+
+  .time-box .num {
+    font-size: 18px;
+  }
+
+  .time-box .label {
+    font-size: 10px;
+  }
+
+  .features {
+    flex-direction: row;
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .about-box {
+    flex-direction: column;
+  }
+
+  .container-faq {
+    width: 100%;
+    padding-left: 10px;
+  }
+  .cta-text{
+    font-size: 17px;
+  }
+  .last-container{
+    font-size: 12px;
+  }
+  .btn-primary {
+    font-size: 14px;
+    padding: 0.4rem 1rem;
+  }
+
+  .cta-text {
+    font-size: 18px;
+  }
+  .webinar-container{
+    flex-direction: column;
+    width: 100%;
+  }
+  .countdown-box{
+    flex-direction: row;
+     flex-wrap: nowrap;
+     width: 80%;
+  }
+  .time-box {
+    width: 55px;
+    height: 55px;
+  }
+  .time-box .num {
+    font-size: 18px;
+  }
+  .time-box .label {
+    font-size: 10px;
+  }
+  form {
+    width: 100%;
+    padding: 15px;
+  }
+  button {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  footer { font-size: 14px; }
+    .footer-box iframe { height: 140px; }
+
+}
+
+
+    
