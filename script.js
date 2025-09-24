@@ -93,7 +93,7 @@
       window.open(url, "_blank");
 
       // Google Sheet Save
-      fetch("YOUR_GOOGLE_SCRIPT_URL", {
+      fetch("https://script.google.com/macros/s/AKfycbzq7AwTGdEczayl19zW8eNL6LrOvoCztt9kKMbagymmVERfHsrN0ri2BlhIirtWL3wb/exec", {
         method: "POST",
         body: JSON.stringify({
           date: date,
