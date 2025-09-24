@@ -53,34 +53,34 @@
     });
 */
 
- let selectedSlot = "";
+ let selectedSlot = ""; 
 
-    // Slot selection
-    document.querySelectorAll(".slot").forEach(slot => {
-      slot.addEventListener("click", function() {
-        document.querySelectorAll(".slot").forEach(s => s.classList.remove("active"));
-        this.classList.add("active");
-        selectedSlot = this.textContent;
-      });
-    });
+// Slot selection
+document.querySelectorAll(".slot").forEach(slot => {
+  slot.addEventListener("click", function() {
+    document.querySelectorAll(".slot").forEach(s => s.classList.remove("active"));
+    this.classList.add("active");
+    selectedSlot = this.textContent;
+  });
+});
 
-    // Function
-    function sendToWhatsApp() {
-      let date = document.getElementById("date").value;
-      let name = document.getElementById("name").value;
-      let mobile = document.getElementById("mobile").value;
-      let problem = document.getElementById("problem").value;
+// Function
+function sendToWhatsApp() {
+  let date = document.getElementById("date").value;
+  let name = document.getElementById("name").value;
+  let mobile = document.getElementById("mobile").value;
+  let problem = document.getElementById("problem").value;
 
-      if(!date || !selectedSlot || !name || !mobile){
-        alert("कृपया सभी विवरण भरें ✅");
-        return;
-      }
+  if(!date || !selectedSlot || !name || !mobile){
+    alert("कृपया सभी विवरण भरें ✅");
+    return;
+  }
 
-      // 👇 अपना WhatsApp नंबर यहाँ डालें (91 = India code)
-      let gurujiNumber = "919899124949"; 
+  // 👇 WhatsApp नंबर
+  let gurujiNumber = "919899124949"; 
 
-      // WhatsApp Message
-      let message = `🌟 Slot Booking Request 🌟%0A
+  // WhatsApp Message
+  let message = `🌟 Slot Booking Request 🌟%0A
 📅 Date: ${date}%0A
 ⏰ Time: ${selectedSlot}%0A
 👤 Name: ${name}%0A
@@ -88,22 +88,22 @@
 📝 Problem: ${problem}%0A
 💳 Payment: Done via QR ✅`;
 
-      // WhatsApp Open
-      let url = `https://wa.me/${gurujiNumber}?text=${message}`;
-      window.open(url, "_blank");
+  // WhatsApp Open
+  let url = `https://wa.me/${gurujiNumber}?text=${message}`;
+  window.open(url, "_blank");
 
-      // Google Sheet Save
-      fetch("https://script.google.com/macros/s/AKfycbzq7AwTGdEczayl19zW8eNL6LrOvoCztt9kKMbagymmVERfHsrN0ri2BlhIirtWL3wb/exec", {
-        method: "POST",
-        body: JSON.stringify({
-          date: date,
-          slot: selectedSlot,
-          name: name,
-          mobile: mobile,
-          problem: problem
-        }),
-        headers: { "Content-Type": "application/json" }
-      })
-      .then(res => console.log("Data saved in Google Sheet ✅"))
-      .catch(err => console.error("Error:", err));
-    }
+  // Google Sheet Save
+  fetch("https://script.google.com/macros/s/AKfycbzq7AwTGdEczayl19zW8eNL6LrOvoCztt9kKMbagymmVERfHsrN0ri2BlhIirtWL3wb/exec", {
+    method: "POST",
+    body: JSON.stringify({
+      date: date,
+      slot: selectedSlot,
+      name: name,
+      mobile: mobile,
+      problem: problem
+    }),
+    headers: { "Content-Type": "application/json" }
+  })
+  .then(res => console.log("Data saved in Google Sheet ✅"))
+  .catch(err => console.error("Error:", err));
+}
