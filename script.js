@@ -53,7 +53,7 @@
     });
 */
 
- let selectedSlot = ""; 
+let selectedSlot = ""; 
 
 // Slot selection
 document.querySelectorAll(".slot").forEach(slot => {
@@ -71,9 +71,16 @@ function sendToWhatsApp() {
   let mobile = document.getElementById("mobile").value;
   let problem = document.getElementById("problem").value;
 
-  if(!date || !selectedSlot || !name || !mobile){
+  if (!date || !selectedSlot || !name || !mobile) {
     alert("कृपया सभी विवरण भरें ✅");
     return;
+  }
+
+  // 👉 Convert date YYYY-MM-DD → DD-MM-YYYY
+  let formattedDate = "";
+  if (date) {
+    let parts = date.split("-"); // ["2025", "09", "25"]
+    formattedDate = `${parts[2]}-${parts[1]}-${parts[0]}`; // 25-09-2025
   }
 
   // 👇 WhatsApp नंबर
@@ -81,7 +88,7 @@ function sendToWhatsApp() {
 
   // WhatsApp Message
   let message = `🌟 Slot Booking Request 🌟%0A
-📅 Date: ${date}%0A
+📅 Date: ${formattedDate}%0A
 ⏰ Time: ${selectedSlot}%0A
 👤 Name: ${name}%0A
 📞 Mobile: ${mobile}%0A
@@ -92,11 +99,11 @@ function sendToWhatsApp() {
   let url = `https://wa.me/${gurujiNumber}?text=${message}`;
   window.open(url, "_blank");
 
- // Google Sheet Save
-  fetch("https://script.google.com/macros/s/AKfycbxrjdkY-MmFlJWwPJMk79e289yQEMvd0aX_DE3YHD1Yw2LQwWpBncBG10CR2Ca0L3fd/exec", {
+  // Google Sheet Save
+  fetch("https://script.google.com/macros/s/AKfycbw8Td5TF03kx1LKt3Qy4BZMSyn_jVpAKzuo1tOcrL-aSdBUWLCwrbHqpee7DNeo5wQI/exec", {
     method: "POST",
     body: JSON.stringify({
-      date: date,
+      date: formattedDate,  // 👈 ab formatted date bhej raha hai
       slot: selectedSlot,
       name: name,
       mobile: mobile,
