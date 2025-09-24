@@ -675,7 +675,10 @@ input, select, textarea {
   }
 
   footer { font-size: 14px; }
-    .footer-box iframe { height: 140px; }
+    .footer-box iframe { 
+       height: 140px;
+       width:100%;
+      }
 
 }
 
