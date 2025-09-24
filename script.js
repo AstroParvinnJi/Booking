@@ -92,18 +92,21 @@ function sendToWhatsApp() {
   let url = `https://wa.me/${gurujiNumber}?text=${message}`;
   window.open(url, "_blank");
 
+  const detail = {
+        date,
+        selectedSlot,
+        name,
+        mobile,
+        problem
+      };
+
+  
   // Google Sheet Save
-  fetch("https://script.google.com/macros/s/AKfycbxrjdkY-MmFlJWwPJMk79e289yQEMvd0aX_DE3YHD1Yw2LQwWpBncBG10CR2Ca0L3fd/exec", {
-    method: "POST",
-    body: JSON.stringify({
-      date: date,
-      slot: selectedSlot,
-      name: name,
-      mobile: mobile,
-      problem: problem
-    }),
-    headers: { "Content-Type": "application/json" }
-  })
-  .then(res => console.log("Data saved in Google Sheet ✅"))
-  .catch(err => console.error("Error:", err));
-}
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyxrmmKlHZ5byoWVsZj9sjIWX1ULkrqhP1gG1ldqVp3lPZPQXsuAIJfiYR5odIPjRfnzg/exec';
+      fetch(scriptURL, {
+        method: 'POST',
+        body: JSON.stringify(detail)
+      }).catch(error => {
+        console.error('Error!', error.message);
+      });
+    });
