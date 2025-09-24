@@ -106,4 +106,4 @@ function sendToWhatsApp() {
   })
   .then(res => console.log("Data saved in Google Sheet ✅"))
   .catch(err => console.error("Error:", err));
-}
+};
