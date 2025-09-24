@@ -93,7 +93,7 @@ function sendToWhatsApp() {
   window.open(url, "_blank");
 
   // Google Sheet Save
-  fetch("https://script.google.com/macros/s/AKfycbztLbtNbEZ-SFwcegORunq98jpKc4Evz0fpXn4DGrAY7R_QbzDoDBHfitIXnuwZD5ihRg/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbypzPb3vdcdXcnrnjoQJfqJ2gtUiidlQ58K96R6PmAUg_iL1YCuhaFuoeex8QVmFPh0Nw/exec", {
     method: "POST",
     body: JSON.stringify({
       date: date,
